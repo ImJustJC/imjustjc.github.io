@@ -1,0 +1,16 @@
+{% assign date_format = site.date_format | default: "%B %-d, %Y" %}
+{% if page.last_modified_at %}
+  <!-- <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ site.data.ui-text[site.active_lang].date_label | default: "Updated:" }}</strong> <time class="dt-published" datetime="{{ page.last_modified_at | date: "%Y-%m-%d" }}">{{ page.last_modified_at | date: date_format }}</time></p> -->
+  {% assign date_day = page.last_modified_at | date: "%d" %}
+  {% assign date_month = page.last_modified_at | date: "%m" | minus: 1 %}
+  {% assign date_month_name = site.data.l10n.date_months[date_month] %}	
+  {% assign date_year = page.last_modified_at | date: "%Y" %}
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i></strong> <time class="dt-published" datetime="{{ page.last_modified_at | date: "%Y-%m-%d" }}">{{ date_day }} - {{ date_month_name }} - {{ date_year }}</time></p>
+{% elsif page.date %}
+  <!-- <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ site.data.ui-text[site.active_lang].date_label | default: "Updated:" }}</strong> <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: date_format }}</time></p> -->
+  {% assign date_day = page.date | date: "%d" %}
+  {% assign date_month = page.date | date: "%m" | minus: 1 %}
+  {% assign date_month_name = site.data.l10n.date_months[date_month] %}	
+  {% assign date_year = page.date | date: "%Y" %}
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i></strong> <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}">{{ date_day }} - {{ date_month_name }} - {{ date_year }}</time></p>
+{% endif %}

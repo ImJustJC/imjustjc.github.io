@@ -1,9 +1,10 @@
 main:
-  - title: "Posts"
-    url: /posts/
-  - title: "Categories"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
-  - title: "About"
-    url: /about/
+  - title: games_title
+    url: /my-games
+    description: games_description
+  - title: other_projects_title
+    url: /other-projects
+    description: other_projects_description
+  - title: blog_title
+    url: /game-reviews
+    description: blog_description

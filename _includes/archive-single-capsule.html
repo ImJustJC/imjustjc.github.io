@@ -1,0 +1,83 @@
+{% if include.post %}
+  {% if include.post.header.teaser %}
+    {% capture teaser %}{{ include.post.header.teaser }}{% endcapture %}
+  {% else %}
+    {% assign teaser = site.teaser %}
+  {% endif %}
+
+  {% if include.post.id %}
+    {% assign title = include.post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+  {% else %}
+    {% assign title = include.post.title %}
+  {% endif %}
+
+
+  <div class="{{ include.type | default: 'list' }}__item">
+    <article class="archive__item product-card" itemscope itemtype="https://schema.org/CreativeWork" {% if include.post.locale %} lang="{{ include.post.locale }}" {% endif %}>
+      {% if include.post.header_image %}
+      <img src="{{ include.post.header_image | relative_url }}" alt="" />
+      {% else %}
+      <img src="https://placehold.co/250x250" alt="" />
+      {% endif %}
+      <div class="product-card__description">
+        <h2 class="archive__item-title no_toc" itemprop="headline">
+          <a href="{{ include.post.url | relative_url }}" rel="permalink">{{ title }}</a>
+        </h2>
+
+        {% if include.post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ include.post.excerpt | markdownify | strip_html | truncate: 160 }}</p>
+        {% endif %}
+
+        <p class="page__taxonomy">
+          <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> {{ site.data.ui-text[site.active_lang].tags_label | default: "Tags:" }} </strong>
+          <span itemprop="keywords">
+          {% for tag_word in include.post.tags %}
+            <a href="{{ tag_word | slugify | prepend: "/my-projects#" | relative_url }}" class="page__taxonomy-item p-category" rel="tag">{{ tag_word }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
+          {% endfor %}
+          </span>
+        </p>
+      </div>
+
+    </article>
+  </div>
+{% else %}
+  {% if post.header.teaser %}
+    {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+  {% else %}
+    {% assign teaser = site.teaser %}
+  {% endif %}
+
+  {% if post.id %}
+    {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+  {% else %}
+    {% assign title = post.title %}
+  {% endif %}
+
+
+  <div class="{{ include.type | default: 'list' }}__item">
+  <article class="archive__item product-card" itemscope itemtype="https://schema.org/CreativeWork" {% if post.locale %} lang="{{ post.locale }}" {% endif %}>
+    {% if post.header_image %}
+    <img src="{{ post.header_image | relative_url }}" alt="" />
+    {% else %}
+    <img src="https://placehold.co/250x250" alt="" />
+    {% endif %}
+    <div class="product-card__description">
+      <h2 class="archive__item-title no_toc" itemprop="headline">
+        <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
+      </h2>
+
+      {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>
+      {% endif %}
+
+      <p class="page__taxonomy">
+        <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> {{ site.data.ui-text[site.active_lang].tags_label | default: "Tags:" }} </strong>
+        <span itemprop="keywords">
+        {% for tag_word in post.tags %}
+          <a href="{{ tag_word | slugify | prepend: path_type | prepend: site.tag_archive.path | relative_url }}" class="page__taxonomy-item p-category" rel="tag">{{ tag_word }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
+        {% endfor %}
+        </span>
+      </p>
+    </div>
+
+  </article>
+  </div>
+{% endif %}

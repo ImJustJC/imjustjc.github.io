@@ -1,0 +1,28 @@
+.quote-rule {
+    border-top: 1px solid $primary-color;
+    border-bottom: 1px solid $primary-color;
+    border-left: none;
+    border-right: none;
+    border-radius: 8px;
+    font-style: normal;
+  }
+
+.quote-spoiler{
+  background-color: black;
+  color: transparent;
+  user-select: none;
+  cursor: help;
+}
+
+.quote-spoiler:focus {
+  // background-color: inherit;
+  color: inherit;
+}
+
+.quote-shadowbox {
+  border: 1px solid $primary-color;
+  border-radius: 8px;
+  padding: 0.5em 1em;
+  margin-bottom: 1.3em;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.75);
+}
