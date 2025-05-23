@@ -5,27 +5,46 @@
     }
 
     .product-card {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        display: grid;
         gap: 1em;
+        grid-template-areas:
+            "title"
+            "img"
+            "info"
+            "tags";
 
         align-items: center;
-        padding: 0.5em;
-        padding-bottom: 0.75em;
-        margin: 2em;
+        padding: 1em 1.5em 1em 1.5em;
+        margin-bottom: 0.75em;
         text-align: center;
         background-color: mix(#000, $background-color, 10%);
         border: 2px solid $primary-color;
         border-radius: 12px;
         text-decoration: none !important;
-        text-align: center;
 
-        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        transition: transform 0.2s ease-in-out,
+            box-shadow 0.2s ease-in-out;
 
         &:hover {
             transform: scale(1.1);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.47);
+        }
+
+        .title {
+            width: 100%;
+            grid-area: title;
+        }
+
+        .img {
+            grid-area: img;
+        }
+
+        .info {
+            grid-area: info;
+        }
+
+        .tags {
+            grid-area: tags;
         }
 
         img {
@@ -34,8 +53,6 @@
         }
 
         a {
-            width: fit-content;
-
             text-decoration: none;
 
             &:hover {
@@ -57,7 +74,6 @@
         }
 
         p {
-            height: 25%;
             color: $text-color;
             text-align: center;
             margin: 0 !important;
@@ -97,10 +113,11 @@
         display: grid;
         gap: 1em;
         grid-template-areas:
-            "title title title"
-            "img img info"
-            "tags tags tags";
+            "title title"
+            "img info"
+            "tags tags";
 
+        grid-template-columns: 60% 40%;
         grid-template-rows: auto 1fr auto;
 
         align-items: center;
@@ -111,7 +128,6 @@
         border: 2px solid $primary-color;
         border-radius: 12px;
         text-decoration: none !important;
-        text-align: center;
 
         transition: transform 0.2s ease-in-out,
             box-shadow 0.2s ease-in-out;
@@ -132,6 +148,7 @@
 
         .info {
             grid-area: info;
+            font-size: $type-size-6;
         }
 
         .tags {
@@ -141,11 +158,10 @@
         img {
             border-radius: 12px;
             margin-bottom: 0.5em;
+            max-height: 350px;
         }
 
         a {
-            width: fit-content;
-
             text-decoration: none;
 
             &:hover {

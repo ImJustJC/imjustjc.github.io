@@ -6,7 +6,30 @@ title: Inicio
 page_id: landing
 ---
 
-¡Hola! Soy Juan Carlos, aunque quienes me han sufrido me llaman directamente JC, y desde 2020 o por ahí me gusta intentar hacer juegos. Estudié grado y máster de Ingeniería Informática en la Universidad de Jaén y en los pocos ratos libres que tenía fuí probando a desarrollar alguna idea con motores gráficos varios. Actualmente trabajo con el Grupo de Gráficos y Geomática de la UJA desde hace un par de años ya y he publicado con ellos dos artículos científicos. Visita mi página de LinkedIn (al pie de cualquier página en todo momento, pero te lo dejo aquí tambien esta vez <a href="https://www.linkedin.com/in/juan-carlos-fernández-pérez-462622220/"><i class="fa-brands fa-linkedin"></i></a>) para más detalles sobre mi vida estudiantil y profesional, este espacio lo reservo para mis jueguicos :D
+<div style="display: flex; gap: 1.3rem;">
+  <div>
+    <p>
+      ¡Hola! Soy Juan Carlos, aunque quienes me han sufrido me llaman directamente JC, y desde 2020 o por ahí me gusta
+      intentar hacer juegos. Estudié grado y máster de Ingeniería Informática en la Universidad de Jaén y en los pocos
+      ratos libres que tenía iba probando a desarrollar alguna idea con motores gráficos varios, pero ahora mismo estoy
+      enamorado de ✨Godot✨ y tengo un poco (bastante) rencor a Unity >:(
+    </p>
+    <p>
+      Echa un vistazo a la tarjeta de la derecha si quieres ver mis perfiles de Steam, mi plataforma principal, y
+      Backlogged (no llevo mucho tiempo, pero voy actualizándolo conforme juego). Más abajo tienes algunos proyectos que
+      destaco personalmente, siéntete libre de explorar esta página para ver mis otros proyectos ;)
+    </p>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: flex-end;">
+    <iframe
+      src="https://gamer2810.github.io/steam-miniprofile/?accountId=76561198095287506&lang=spanish&appId=367520&interactive=true&vanityId=ImJustJC"
+      name="steamMiniProfilePreview" scrolling="no" frameborder="0" allowfullscreen="false"
+      style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px"
+      marginwidth="0px" height="300px" width="400px" allowfullscreen></iframe>
+    <a href="https://backloggd.com/u/ImJustJC/" style="display: block; margin: auto;">Backloggd - ImJustJC</a>
+  </div>
+</div>
+
 
 # Proyectos destacados
 

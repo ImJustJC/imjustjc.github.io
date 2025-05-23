@@ -6,7 +6,26 @@ title: Home
 page_id: landing
 ---
 
-Hi there! I'm Juan Carlos, but everyone ends up calling me JC, and I started making games around 2020. I studied a bachelor's and master's degree at University of Jaén (UJA), taking any tiny free time I had trying to develop some game ideas with a few game engines. For now, I've been working within Graphics and Geomatics Group at UJA for a bit more than two years, and we published two research papers. Visit my LinkedIn profile (found at the footer in every page, but i'll leave it here this time <a href="https://www.linkedin.com/in/juan-carlos-fernández-pérez-462622220/"><i class="fa-brands fa-linkedin"></i></a>) for more details and references about my professional life and studies, this place is saved for my games :D
+
+<div style="display: flex; gap: 1.3rem;">
+  <div>
+    <p>
+      Hi there! I'm Juan Carlos, but everyone ends up calling me JC, and I started making games around 2020. I studied a bachelor's and master's degree at University of Jaén (UJA), taking any tiny free time I had trying to develop some game ideas with a few game engines. Currently in love with ✨Godot✨ and kind of hating Unity >:(
+    </p>
+    <p>
+      Check out the cards at the right side for a peek over my Steam profile, where I play almost everything, and Backlogged journal (I started with it recently, so I´ll be updating the logs from time to time). Below this you can see some personally featured projects, feel free to explore this site and find out more stuff I made ;)
+    </p>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: flex-end;">
+    <iframe
+      src="https://gamer2810.github.io/steam-miniprofile/?accountId=76561198095287506&appId=367520&interactive=true&vanityId=ImJustJC"
+      name="steamMiniProfilePreview" scrolling="no" frameborder="0" allowfullscreen="false"
+      style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px"
+      marginwidth="0px" height="300px" width="400px" allowfullscreen></iframe>
+    <a href="https://backloggd.com/u/ImJustJC/" style="display: block; margin: auto;">Backloggd - ImJustJC</a>
+  </div>
+</div>
+
 
 # Featured projects
 
