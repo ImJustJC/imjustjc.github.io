@@ -6,6 +6,7 @@ blog_title: "Reseñas de juegos"
 blog_description: "Blog con cosas que pienso sobre algunos juegos"
 games_title: "Mis juegos"
 games_description: "Juego que he hecho o estoy intentando hacer"
+tags_title: "Etiquetas"
 date_months:
  - Enero
  - Febrero

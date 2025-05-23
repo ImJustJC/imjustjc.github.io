@@ -1,0 +1,194 @@
+@media screen and (min-device-width: $x-small) and (max-device-width: $medium) {
+    .product-card-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .product-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1em;
+
+        align-items: center;
+        padding: 0.5em;
+        padding-bottom: 0.75em;
+        margin: 2em;
+        text-align: center;
+        background-color: mix(#000, $background-color, 10%);
+        border: 2px solid $primary-color;
+        border-radius: 12px;
+        text-decoration: none !important;
+        text-align: center;
+
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.47);
+        }
+
+        img {
+            border-radius: 12px;
+            margin-bottom: 0.5em;
+        }
+
+        a {
+            width: fit-content;
+
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+        }
+
+        h1 {
+            color: $primary-color;
+            text-align: center;
+            margin: 0 !important;
+        }
+
+        h4 {
+            color: $text-color;
+            text-align: center;
+            margin: 0 !important;
+        }
+
+        p {
+            height: 25%;
+            color: $text-color;
+            text-align: center;
+            margin: 0 !important;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .tag-container {
+            display: grid;
+            row-gap: 0.5em;
+            justify-items: stretch;
+            justify-content: space-around;
+            margin-top: 0.5em;
+        }
+
+        .tag {
+            padding: 0.25em;
+            border: 1px solid $primary-color;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none !important;
+        }
+    }
+}
+
+@media screen and (min-device-width: $medium) {
+    .product-card-container {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        @include breakpoint($x-large) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .product-card {
+        display: grid;
+        gap: 1em;
+        grid-template-areas:
+            "title title title"
+            "img img info"
+            "tags tags tags";
+
+        grid-template-rows: auto 1fr auto;
+
+        align-items: center;
+        padding: 1em 1.5em 1em 1.5em;
+        margin: 0.75em;
+        text-align: center;
+        background-color: mix(#000, $background-color, 10%);
+        border: 2px solid $primary-color;
+        border-radius: 12px;
+        text-decoration: none !important;
+        text-align: center;
+
+        transition: transform 0.2s ease-in-out,
+            box-shadow 0.2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.47);
+        }
+
+        .title {
+            width: 100%;
+            grid-area: title;
+        }
+
+        .img {
+            grid-area: img;
+        }
+
+        .info {
+            grid-area: info;
+        }
+
+        .tags {
+            grid-area: tags;
+        }
+
+        img {
+            border-radius: 12px;
+            margin-bottom: 0.5em;
+        }
+
+        a {
+            width: fit-content;
+
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+        }
+
+        h1 {
+            color: $primary-color;
+            text-align: center;
+            margin: 0 !important;
+        }
+
+        h4 {
+            color: $text-color;
+            text-align: center;
+            margin: 0 !important;
+        }
+
+        p {
+            color: $text-color;
+            text-align: center;
+            margin: 0 !important;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .tag-container {
+            display: grid;
+            row-gap: 0.5em;
+            justify-items: stretch;
+            justify-content: space-around;
+            margin-top: 0.5em;
+        }
+
+        .tag {
+            padding: 0.25em;
+            border: 1px solid $primary-color;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none !important;
+        }
+    }
+
+}

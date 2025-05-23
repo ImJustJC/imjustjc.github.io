@@ -6,6 +6,7 @@ blog_title: "Game reviews"
 blog_description: "Kind of a blog with my thoughts about some games"
 games_title: "My games"
 games_description: "The games I've made or am trying to make"
+tags_title: "Tags"
 date_months:
  - January
  - February

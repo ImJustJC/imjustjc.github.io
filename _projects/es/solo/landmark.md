@@ -4,7 +4,7 @@ lang: es
 page_id: landmark
 date: 14/09/2024
 project_type: game
-header_image: /assets/images/projects/LandmARk/landmark1.png
+header_image: /assets/images/projects/landmark/landmark1.png
 featured: true
 tags:
 - Unity
@@ -25,9 +25,9 @@ superar los momentos difíciles.
 
 <div
   style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 1.3rem; margin-bottom: 1.3em">
-  <img src="/assets/images/projects/LandmARk/landmark0.png" style="width: 20%;">
-  <img src="/assets/images/projects/LandmARk/landmark1.png" style="width: 20%;">
-  <img src="/assets/images/projects/LandmARk/landmark2.png" style="width: 20%;">
+  <img src="/assets/images/projects/landmark/landmark0.png" style="width: 20%;">
+  <img src="/assets/images/projects/landmark/landmark1.png" style="width: 20%;">
+  <img src="/assets/images/projects/landmark/landmark2.png" style="width: 20%;">
 </div>
 
 <h1>Estrategia en realidad aumentada</h1>
@@ -60,14 +60,14 @@ superar los momentos difíciles.
       Medieval Hexagon Pack de Kaykit</a> y todos los recursos 2D están sacados de varios paquetes de <a href="https://kenney.nl/">Kenney</a>.
     </p>
     <p>
-      Si quieres ver más detalles sobre el desarrollo, aquí tienes la documentación que redacté para el proyecto: <a href="/assets/files/projects/LandmARk/jcfpTFM.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i></a>, y aquí un vídeo recortado con fragmentos suelto que fuí grabando: <a href="https://www.youtube.com/watch?v=Roc0nupi_bs" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+      Si quieres ver más detalles sobre el desarrollo, aquí tienes la documentación que redacté para el proyecto: <a href="/assets/files/projects/landmark/jcfpTFM.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i></a>, y aquí un vídeo recortado con fragmentos suelto que fuí grabando: <a href="https://www.youtube.com/watch?v=Roc0nupi_bs" target="_blank"><i class="fa-brands fa-youtube"></i></a>
     </p>
   </div>
   <div style="flex: 0 0 15%">
-    <img src="/assets/images/projects/LandmARk/arMarkerTest1.jpg" />
+    <img src="/assets/images/projects/landmark/arMarkerTest1.jpg" />
   </div>
   <div style="flex: 0 0 15%">
-    <img src="/assets/images/projects/LandmARk/arMarkerTest2.jpg" />
+    <img src="/assets/images/projects/landmark/arMarkerTest2.jpg" />
   </div>
 </div>
 

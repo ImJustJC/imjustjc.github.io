@@ -1,10 +1,10 @@
 main:
   - title: games_title
-    url: /my-games
+    url: /games
     description: games_description
   - title: other_projects_title
     url: /other-projects
     description: other_projects_description
   - title: blog_title
-    url: /game-reviews
+    url: /reviews
     description: blog_description

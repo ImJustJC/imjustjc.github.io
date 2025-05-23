@@ -4,7 +4,7 @@ lang: en
 page_id: landmark
 date: 14/09/2024
 project_type: game
-header_image: /assets/images/projects/LandmARk/landmark1.png
+header_image: /assets/images/projects/landmark/landmark1.png
 featured: true
 tags:
   - Unity
@@ -22,9 +22,9 @@ LandmARk was born in 2023 as an idea for my master's thesis project in Computer 
 
 <div
   style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 1.3rem; margin-bottom: 1.3em">
-  <img src="/assets/images/projects/LandmARk/landmark0.png" style="width: 20%;">
-  <img src="/assets/images/projects/LandmARk/landmark1.png" style="width: 20%;">
-  <img src="/assets/images/projects/LandmARk/landmark2.png" style="width: 20%;">
+  <img src="/assets/images/projects/landmark/landmark0.png" style="width: 20%;">
+  <img src="/assets/images/projects/landmark/landmark1.png" style="width: 20%;">
+  <img src="/assets/images/projects/landmark/landmark2.png" style="width: 20%;">
 </div>
 
 <h1>Augmented reality strategy</h1>
@@ -44,13 +44,13 @@ LandmARk was born in 2023 as an idea for my master's thesis project in Computer 
       The game supports Android devices and was developed with Unity and the Vuforia Engine library, handling augmented reality shenanigans. 3D models came from <a href="https://kaylousberg.itch.io/kaykit-medieval-hexagon">Kaykit's Medieval Hexagon Pack</a> and all 2D resources were obtained from <a href="https://kenney.nl/">Kenney's</a> collections.
     </p>
     <p>
-      For detailed information about development and the project itself, check the thesis documentation (spanish only): <a href="/assets/files/projects/LandmARk/jcfpTFM.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i></a>, and here is a short video showcasing some gameplay clips: <a href="https://www.youtube.com/watch?v=Roc0nupi_bs" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+      For detailed information about development and the project itself, check the thesis documentation (spanish only): <a href="/assets/files/projects/landmark/jcfpTFM.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i></a>, and here is a short video showcasing some gameplay clips: <a href="https://www.youtube.com/watch?v=Roc0nupi_bs" target="_blank"><i class="fa-brands fa-youtube"></i></a>
     </p>
   </div>
   <div style="flex: 0 0 15%">
-    <img src="/assets/images/projects/LandmARk/arMarkerTest1.jpg" />
+    <img src="/assets/images/projects/landmark/arMarkerTest1.jpg" />
   </div>
   <div style="flex: 0 0 15%">
-    <img src="/assets/images/projects/LandmARk/arMarkerTest2.jpg" />
+    <img src="/assets/images/projects/landmark/arMarkerTest2.jpg" />
   </div>
 </div>

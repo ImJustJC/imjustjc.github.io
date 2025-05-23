@@ -8,7 +8,5 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-@import "capsule";
-@import "vertical-card";
-@import "horizontal-card";
+@import "product-card";
 @import "quoteblocks";
