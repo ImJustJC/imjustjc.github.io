@@ -6,7 +6,7 @@ title: Inicio
 page_id: landing
 ---
 
-<div style="display: flex; flex-direction: column; gap: 1.3rem;">
+<div class="home_about">
   <div>
     <p>
       ¡Hola! Soy Juan Carlos, aunque quienes me han sufrido me llaman directamente JC, y desde 2020 o por ahí me gusta
@@ -15,13 +15,12 @@ page_id: landing
       enamorado de ✨Godot✨ y tengo un poco (bastante) rencor a Unity >:(
     </p>
   </div>
-  <div style="display: flex; flex-direction: column; align-items: center;">
+  <div>
     <iframe
       src="https://gamer2810.github.io/steam-miniprofile/?accountId=76561198095287506&lang=spanish&appId=367520&interactive=true&vanityId=ImJustJC"
       name="steamMiniProfilePreview" scrolling="no" frameborder="0" allowfullscreen="false"
       style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px"
       marginwidth="0px" height="300px" width="320px" allowfullscreen></iframe>
-    <a href="https://backloggd.com/u/ImJustJC/" style="display: block; margin: auto;">Backloggd - ImJustJC</a>
   </div>
 </div>
 

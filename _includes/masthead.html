@@ -7,20 +7,41 @@
         {% unless logo_path == empty %}
           <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.data.l10n.title }}"></a>
         {% endunless %}
-        <a class="site-title" href="{{ '/' | relative_url }}">
-          {{ site.masthead_title | default: site.data.l10n.title }}
-          {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
-        </a>
+        <div class="site-title" style="display: flex; flex-direction: column;">
+          {% if site.active_lang == site.default_lang %}
+            <a href="{{ '/' | relative_url }}" style="align-self: center;">
+          {% else %}
+            <a href="{{ '/' | relative_url }}{{site.active_lang}}" style="align-self: center;">
+          {% endif %}
+            {{ site.masthead_title | default: site.data.l10n.title }}
+            {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
+          </a>
+          <div class="lang_selector" style="display: flex;">
+            {% include lang_selector.html %}
+          </div>
+        </div>
         <ul class="visible-links">
-          {%- for link in site.data.navigation.main -%}
+          {% if site.active_lang == site.default_lang %}
+            {%- for link in site.data.navigation.main -%}
+              <li class="masthead__menu-item">
+                <a
+                  href="{{ link.url | relative_url }}"
+                  {% if link.description %} title="{{ site.data[site.active_lang].l10n[link.description] }}"{% endif %}
+                  {% if link.target %} target="{{ link.target }}"{% endif %}
+                >{{ site.data[site.active_lang].l10n[link.title] }}</a>
+              </li>
+            {%- endfor -%}
+          {% else %}
+            {%- for link in site.data.navigation.main -%}
             <li class="masthead__menu-item">
               <a
-                href="{{ link.url | relative_url }}"
+                href="/{{site.active_lang}}{{ link.url | relative_url }}"
                 {% if link.description %} title="{{ site.data[site.active_lang].l10n[link.description] }}"{% endif %}
                 {% if link.target %} target="{{ link.target }}"{% endif %}
               >{{ site.data[site.active_lang].l10n[link.title] }}</a>
             </li>
-          {%- endfor -%}
+            {%- endfor -%}
+          {% endif %}
         </ul>
         {% if site.search == true %}
         <button class="search__toggle" type="button">

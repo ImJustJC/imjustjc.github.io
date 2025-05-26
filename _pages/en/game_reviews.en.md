@@ -6,6 +6,6 @@ permalink: /reviews
 page_id: reviews
 ---
 
-{% for post in site.games limit: 5 %}
+{% for post in site.games reversed %}
   {% include archive-single.html %}
 {% endfor %}

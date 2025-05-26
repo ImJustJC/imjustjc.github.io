@@ -1,22 +1,27 @@
+{% capture lang_url_prefix %} {{ include.product_page.url | relative_url }} {% endcapture %}
+{% if site.active_lang != site.default_lang %}
+  {% capture lang_url_prefix %} /{{site.active_lang}}{{ include.product_page.url | relative_url }} {% endcapture %}
+{% endif %}
+
 {% if include.product_page.vertical_card %}
 <div class="product-card product-card-template-vertical">
 {% else %}
 <div class="product-card product-card-template-horizontal">
 {% endif %}
-    <a class="title" href="{{ include.product_page.url | relative_url }}" rel="permalink">
+    <a class="title" href="{{ lang_url_prefix }}" rel="permalink">
       <h1>{{ include.product_page.title }}</h1>
     </a>
       {% if include.product_page.header_image %}
-        <a class="img" href="{{ include.product_page.url | relative_url }}" rel="permalink"><img src="{{ include.product_page.header_image }}" /></a>
+        <a class="img" href="{{ lang_url_prefix }}" rel="permalink"><img src="{{ include.product_page.header_image }}" /></a>
       {% else %}
-        <a class="img" href="{{ include.product_page.url | relative_url }}" rel="permalink"><img src="https://placehold.co/450x350" /></a>
+        <a class="img" href="{{ lang_url_prefix }}" rel="permalink"><img src="https://placehold.co/450x350" /></a>
       {% endif %}
     <div class="info">
       {% assign date_day = include.product_page.date | date: "%d" %}
       {% assign date_month = include.product_page.date | date: "%m" | minus: 1 %}
       {% assign date_month_name = site.data.l10n.date_months[date_month] %}
       {% assign date_year = include.product_page.date | date: "%Y" %}
-      <p><strong>{{ date_month_name }} - {{ date_year }}</strong></p>
+      <p><strong>{{ date_month_name }} {{ date_year }}</strong></p>
       <!-- <p><strong>{{ date_month_name }} - {{ date_year }}</strong> <br /> {{ include.product_page.excerpt | markdownify | strip_html }}</p> -->
     </div>
     <div class="tags">
