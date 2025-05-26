@@ -1,22 +1,27 @@
-<div class="product-card">
+{% if include.product_page.vertical_card %}
+<div class="product-card product-card-template-vertical">
+{% else %}
+<div class="product-card product-card-template-horizontal">
+{% endif %}
     <a class="title" href="{{ include.product_page.url | relative_url }}" rel="permalink">
       <h1>{{ include.product_page.title }}</h1>
     </a>
       {% if include.product_page.header_image %}
-        <a href="{{ include.product_page.url | relative_url }}" rel="permalink"><img src="{{ include.product_page.header_image }}" /></a>
+        <a class="img" href="{{ include.product_page.url | relative_url }}" rel="permalink"><img src="{{ include.product_page.header_image }}" /></a>
       {% else %}
-        <a href="{{ include.product_page.url | relative_url }}" rel="permalink"><img src="https://placehold.co/450x350" /></a>
+        <a class="img" href="{{ include.product_page.url | relative_url }}" rel="permalink"><img src="https://placehold.co/450x350" /></a>
       {% endif %}
     <div class="info">
       {% assign date_day = include.product_page.date | date: "%d" %}
       {% assign date_month = include.product_page.date | date: "%m" | minus: 1 %}
       {% assign date_month_name = site.data.l10n.date_months[date_month] %}
       {% assign date_year = include.product_page.date | date: "%Y" %}
-      <p><strong>{{ date_month_name }} - {{ date_year }}</strong> <br /> {{ include.product_page.excerpt | markdownify | strip_html }}</p>
+      <p><strong>{{ date_month_name }} - {{ date_year }}</strong></p>
+      <!-- <p><strong>{{ date_month_name }} - {{ date_year }}</strong> <br /> {{ include.product_page.excerpt | markdownify | strip_html }}</p> -->
     </div>
     <div class="tags">
-      <h4><strong class="fas fa-fw fa-tags"></strong> {{ site.data.l10n.tags_title }} <strong class="fas fa-fw fa-tags"></strong></h4>
-      <div class="tag-container" style="grid-template-columns: repeat( {{ include.product_page.tags | size | at_most: 3 }}, max-content)">
+      <!-- <h4><strong class="fas fa-fw fa-tags"></strong> {{ site.data.l10n.tags_title }} <strong class="fas fa-fw fa-tags"></strong></h4> -->
+      <div class="tag-container">
         {% for tag_word in include.product_page.tags %}
           <a href="{{ relative_url }}/all-projects#{{ tag_word | slugify }}" class="tag">{{ tag_word }}</a>
         {% endfor %}

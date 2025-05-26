@@ -5,7 +5,7 @@ page_id: geu
 date: 01/01/2025
 header_image: /assets/images/projects/geu/frontGEU.jpg
 project_type: other
-featured: false
+featured: true
 tags:
   - Windows
   - OpenGL

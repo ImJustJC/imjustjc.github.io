@@ -6,6 +6,7 @@ date: 14/09/2024
 project_type: game
 header_image: /assets/images/projects/landmark/landmark1.png
 featured: true
+vertical_card: true
 tags:
 - Unity
 - Mobile
