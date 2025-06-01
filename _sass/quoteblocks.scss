@@ -19,6 +19,16 @@
   color: inherit;
 }
 
+.quote-spoiler-image {
+  filter: brightness(0);
+  user-select: none;
+  cursor: help;
+}
+
+.quote-spoiler-image:focus {
+  filter: brightness(1);
+}
+
 .quote-shadowbox {
   border: 1px solid $primary-color;
   border-radius: 8px;
