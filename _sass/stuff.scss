@@ -1,0 +1,11 @@
+.item_box {
+    display: flex;
+    flex-direction: column;
+    padding: 0.25em;
+    margin: auto;
+    border: 1px solid $primary-color;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none !important;
+    width: 200px;
+}

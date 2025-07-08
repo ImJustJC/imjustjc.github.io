@@ -2,7 +2,7 @@
 title: "GEU"
 lang: es
 page_id: geu
-date: 01/01/2025
+date: 30/06/2025
 header_image: /assets/images/projects/geu/frontGEU.jpg
 project_type: other
 featured: true
@@ -19,27 +19,59 @@ Motor gráfico para nubes de puntos preparado para labores de investigación en 
 
 GEU (<b>G</b>eospatial and <b>E</b>nvironmental tools of <b>U</b>niversity of Jaén) es un prototipo de motor gráfico en desarrollo propiedad del <a href="https://gggj.ujaen.es/">Grupo de Gráficos y Geomática de la Universidad de Jaén</a> orientado a nubes de puntos 3D. Aunque su origen real es anterior, la aplicación utilizada en la actualidad nace hacia finales de 2021 como una plataforma en la que unificar la investigación en nubes de puntos, el punto fuerte del grupo. Viendo las necesidades y exigencias de los métodos implementados y por implementar, nos decantamos por utilizar C++ junto a OpenGL, principalmente por ser lo que estábamos aprendiendo en la carrera y su flexibilidad sin llegar a ser extremadamente complejos.
 
-<img src="/assets/images/projects/geu/mainGEU.png" />
+<div style="margin-bottom: 1.3em; display: flex; flex-direction: column;">
+  <img src="/assets/images/projects/geu/mainGEU.png" style="width: 100%; margin: auto;">
+</div>
 
 <h2>Interfaz gráfica de usuario</h2>
 
-<div style="display: flex; flex-direction: row; align-items: center; margin-bottom: 1.3em; gap: 1.5em">
-  <div style="flex: 1 1 50%">
+<div style="align-items: center; margin-bottom: 1.3em; gap: 1.5em">
+  <p>
+    Durante el inicio del desarrollo, tuve la oportunidad de destinar mis esfuerzos a todo lo relacionado con interfaz de usuario, tanto GUI como controles y manejo, algo que siempre me había interesado profundamente. Para facilitarnos la tarea, incluimos ImGUI como librería externa para montar una interfaz gráfica sencilla que permitiese interactuar con las funcionalidades del motor.
+  </p>
+  <p>
+    Nuestra idea para la interfaz de usuario era clara: recrear el comportamiento de aplicaciones familiares como Unity o Blender, con un listado de objetos en la escena actual y sus detalles, además de otras ventanas para el resto de funcionalidad especializada y un control de la escena utilizando principalmente el ratón. No tardamos mucho en dar un lavado de cara al estilo visual que incluye por defecto ImGUI, y acabamos consiguiendo una organización de ventanas y paleta de color que continúa usándose a día de hoy.
+  </p>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); justify-items: center; column-gap: 1.3rem;">
+  <p><strong>Captura de pantalla de la versión actual de GEU</strong></p>
+  <p><strong>Captura de pantalla de la versión original de GEU</strong></p>
+  <img src="/assets/images/projects/geu/hyperGEU.png" alt="Captura de pantalla de la versión actual de GEU">
+  <img src="/assets/images/projects/geu/oldGEU.png" alt="Captura de pantalla de la versión original de GEU">
+</div>
+
+
+<h2>Funcionalidad modular</h2>
+
+<div class="flex_image_right">
+  <div style="flex: 1 1 55%">
       <p>
-        Durante el inicio del desarrollo, tuve la oportunidad de destinar mis esfuerzos a todo lo relacionado con interfaz de usuario, tanto GUI como controles y manejo, algo que siempre me había interesado profundamente. Para facilitarnos la tarea, incluimos ImGUI como librería externa para montar una interfaz gráfica sencilla que permitiese interactuar con las funcionalidades del motor.
+        Además del uso para renderizado, GEU necesitaba una gestión precisa de datos espectrales y su análisis, el enfoque principal del grupo de investigación. Esta funcionalidad adicional no se emparejaba del todo con las cosas de motor gráfico y están desarrolladas por otros miembros, por lo que se diseñó un sistema de módulo que permitiese encapsular funcionalidad específica y aislarla del resto de la aplicación.
       </p>
       <p>
-        Nuestra idea para la interfaz de usuario era clara: recrear el comportamiento de aplicaciones familiares como Unity o Blender, con un listado de objetos en la escena actual y sus detalles, además de otras ventanas para el resto de funcionalidad especializada y un control de la escena utilizando principalmente el ratón. No tardamos mucho en dar un lavado de cara al estilo visual que incluye por defecto ImGUI (imagen a la derecha), y acabamos consiguiendo una organización de ventanas y paleta de color que continúa usandose a día de hoy (imagen del inicio).
+        Al principio, estos módulos se añadían directamente al proyecto, pero no tardó en generar problemas de escala a medida que más desarrolladores se unían al grupo. Con ello, empecé a trabajar en un rediseño por completo del sistema de módulos, utilizando un enfoque dinámico en su lugar: en vez de cargar todos los módulos al inicio, el usuario selecciona qué modulo añadir mientras se ejecuta GEU. Este sistema se implementa mediante librerías de vinculación dinámica (DLL) en Windows, y ha resultado ser un añadido de gran utilidad para usuarios y otros desarrolladores.
       </p>
   </div>
-  <div style="flex: 1 1 50%">
-    <img src="/assets/images/projects/geu/oldGEU.png" />
+  <div style="flex: 1 1 45%; align-items: end; text-align: right;">
+    <img src="/assets/images/projects/geu/modulesGEU.png" />
   </div>
 </div>
 
+<h2>Escaneo espectral y fusión de datos</h2>
+
+Construir un motor gráfico, aunque útil, no era suficiente para el grupo de investigación. Debía añadirse mucha funcionalidad específica, resultando en la implementación del sistema de módulos. Desde entonces, GEU ha recibido bastantes módulos, pero la fusión de datos siempre ha sido esencial y la primera categoría implementada. La fusión de datos significa combinar los conjuntos de datos espectrales y espaciales; esto es, tomar un conjunto de datos espectrales y una nube de puntos escaneada, asignando los valores espectrales correspondientes a cada punto de la nube.
+
+Nuestro trabajo incluía tres tipos de sensores espectrales: térmico, multiespectral e <strong>hiperespectral</strong>. En mi caso, acabé encargado de la fusión hiperespectral, un gran reto dada la magnitud de los datos que emplea, forzando el uso de múltiples optimizaciones para asegurar un buen rendimiento. A la vez, esta fusión formó el punto de entrada a un módulo de análisis así como varias oportunidades de redactar un artículo científico. La siguiente imagen muestra un resumen de esto último, presentando la signatura hiperespectral de un área seleccionada empleando los datos reales (gráfica naranja) contra los datos de nuestro sistema (gráfica azul), que han sido agregados y simplificados para un uso mucho más eficiente:
+
+<div style="margin-bottom: 1.3em; display: flex; flex-direction: column;">
+  <img src="/assets/images/projects/geu/hyperDataGEU.png" style="width: 100%; margin: auto;">
+</div>
+
+
 <h2>Mis aportes a GEU</h2>
 
-Aunque mi enfoque principal es la interfaz de usuario, también trabajé en otros aspectos de GEU más específicos; realmente, la aplicación estaba suficientemente preparada para su uso al cabo de un año o algo más, y el grupo necesitaba un flujo constante de trabajos de investigación.
+Entre todo el trabajo que realicé en GEU, también pude publicar algunos artículos científicos en esos años:
 
 <h3>Artículos científicos</h3>
 

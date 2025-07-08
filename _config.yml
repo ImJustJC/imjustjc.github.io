@@ -184,6 +184,9 @@ keep_files:
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
+webrick:
+  headers:
+    Accept-Ranges: bytes
 
 # Conversion
 markdown: kramdown

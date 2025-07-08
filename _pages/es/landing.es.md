@@ -6,24 +6,32 @@ title: Inicio
 page_id: landing
 ---
 
-<div class="home_about">
-  <div>
-    <p>
-      ¡Hola! Soy Juan Carlos, aunque quienes me han sufrido me llaman directamente JC, y desde 2020 o por ahí me gusta
-      intentar hacer juegos. Estudié grado y máster de Ingeniería Informática en la Universidad de Jaén y en los pocos
-      ratos libres que tenía iba probando a desarrollar alguna idea con motores gráficos varios, pero ahora mismo estoy
-      enamorado de ✨Godot✨ y tengo un poco (bastante) rencor a Unity >:(
+<div class="home_landing">
+  <div class="home_about">
+    <p>¡Hola! Soy Juan Carlos desde Jaén, al sur de España. Desde pequeño, siempre me interesaron los ordenadores en general, y especialmente los videojuegos. De ahí que acabase en la Universidad de Jaén estudiando el grado y máster en Ingeniería Informática, consiguiendo además la oportunidad de trabajar en el grupo de investigación de informática gráfica. Aunque la investigación no es mi punto fuerte, conseguimos resultados muy prometedores, e incluso pude encajar un poco de desarrollo de videojuegos en mi tiempo libre.
+    </p>
+    <p>Esta web la enfoco como una colección de los proyectos en los que he trabajado, sirviendo para mí como una forma de recordar, y como método para exponer mis proyectos con cualquier interesado (gracias por ser uno de ellos :D). En resumen, mis aptitudes principales se centran en la informática gráfica, especialmente C++, OpenGL e ImGUI, aunque también he trasteado con los motores gráficos Unity y Godot.
     </p>
   </div>
-  <div>
-    <iframe
-      src="https://gamer2810.github.io/steam-miniprofile/?accountId=76561198095287506&lang=spanish&appId=367520&interactive=true&vanityId=ImJustJC"
-      name="steamMiniProfilePreview" scrolling="no" frameborder="0" allowfullscreen="false"
-      style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px"
-      marginwidth="0px" height="300px" width="320px" allowfullscreen></iframe>
+  <div class="home_skills">
+    <h2 style="margin-top: 0.65em;">Experiencia</h2>
+    <div style="text-align: center;">
+      <h4 style="margin-top: 0.65em;">Programación</h4>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+        <p class="item_box">C/C++</p>
+        <p class="item_box">OpenGL</p>
+        <p class="item_box">ImGUI</p>
+      </div>
+      <h4 style="margin-top: 0.65em;">Software</h4>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+        <p class="item_box">Git</p>
+        <p class="item_box">Visual Studio</p>
+        <p class="item_box">Godot</p>
+        <p class="item_box">Unity</p>
+      </div>
+    </div>
   </div>
 </div>
-
 
 # Proyectos destacados
 
