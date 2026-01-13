@@ -5,6 +5,3 @@ main:
   - title: other_projects_title
     url: /other-projects
     description: other_projects_description
-  - title: blog_title
-    url: /reviews
-    description: blog_description

@@ -12,7 +12,7 @@ page_id: landing
 
 <div class="home_landing">
   <div class="home_about">
-    <p>Hi! I'm Juan Carlos from Jaén, Andalusia, at southern Spain. Since I was little, computers always were an interest of mine, and more so videogames. That made me end up at University of Jaén studying a computer science bachelor's and master's degree, which also gave a chance on working at the computer graphics research group. Although research is not really my thing, we got some really interesting results, and even better, I managed to slip some game development in between during my free time.</p>
+    <p>Hi! I'm Juan Carlos and I welcome you to this tiny personal place :). Since little, computers always were an interest of mine, and more so videogames. That made me end up at University of Jaén studying a computer science bachelor's and master's degree, which also gave a chance on working at the computer graphics research group. Although research is not really my thing, we got some really interesting results, and even better, I managed to slip some game development in between during my free time.</p>
 
     <p>This website is no more than a collection of projects I've worked on, both for me as a way to remember, and for exposing my work to anyone interested (thanks for being one of them :D). As mentioned, my primary skills consist on computer graphics, specifically C++ with OpenGL and ImGUI, but I also fiddle with Unity and Godot game engines.</p>
   </div>

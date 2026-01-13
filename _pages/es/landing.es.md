@@ -8,7 +8,7 @@ page_id: landing
 
 <div class="home_landing">
   <div class="home_about">
-    <p>¡Hola! Soy Juan Carlos desde Jaén, al sur de España. Desde pequeño, siempre me interesaron los ordenadores en general, y especialmente los videojuegos. De ahí que acabase en la Universidad de Jaén estudiando el grado y máster en Ingeniería Informática, consiguiendo además la oportunidad de trabajar en el grupo de investigación de informática gráfica. Aunque la investigación no es mi punto fuerte, conseguimos resultados muy prometedores, e incluso pude encajar un poco de desarrollo de videojuegos en mi tiempo libre.
+    <p>¡Hola! Soy Juan Carlos y te doy la bienvenida a mi pequeño rincón personal :). Desde pequeño, siempre me interesaron los ordenadores en general, y especialmente los videojuegos. De ahí que acabase en la Universidad de Jaén estudiando el grado y máster en Ingeniería Informática, consiguiendo además la oportunidad de trabajar en el grupo de investigación de informática gráfica. Aunque la investigación no es mi punto fuerte, conseguimos resultados muy prometedores, e incluso pude encajar un poco de desarrollo de videojuegos en mi tiempo libre.
     </p>
     <p>Esta web la enfoco como una colección de los proyectos en los que he trabajado, sirviendo para mí como una forma de recordar, y como método para exponer mis proyectos con cualquier interesado (gracias por ser uno de ellos :D). En resumen, mis aptitudes principales se centran en la informática gráfica, especialmente C++, OpenGL e ImGUI, aunque también he trasteado con los motores gráficos Unity y Godot.
     </p>
