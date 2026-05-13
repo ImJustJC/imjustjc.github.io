@@ -8,8 +8,8 @@ header_image: /assets/images/projects/pylon_hodlr/pylonHodlrFront.png
 featured: false
 vertical_card: false
 tags:
-  - Godot
-  - Web
+  - Unity
+  - Windows
 ---
 
 
